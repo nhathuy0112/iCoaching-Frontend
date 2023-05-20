@@ -1,0 +1,95 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white-color);
+    box-shadow: var(--default-box-shadow);
+    border-radius: var(--default-border-radius);
+    cursor: pointer;
+
+    .avatar {
+        flex: 0 0 50%;
+        margin-bottom: 20px;
+        width: 100%;
+        height: 164px;
+        border-radius: var(--default-border-radius);
+        border: 2px solid var(--primary-color);
+
+        .default {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            background-color: var(--primary-color);
+            border-radius: var(--default-border-radius);
+
+            .icon {
+                margin: auto;
+                width: 80%;
+                height: 80%;
+                color: var(--white-color);
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: var(--default-border-radius);
+        }
+        // @media only screen and (min-width: 1201px) and (max-width: 1920px) {
+        //     height: 114px;
+        // }
+    }
+
+    .info {
+        flex: 0 0 50%;
+        .fullname,
+        .gender,
+        .age {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 190px;
+
+            span {
+                font-size: 1.2rem;
+                font-weight: 500;
+                color: var(--text-color);
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+
+        .fullname span {
+            color: var(--text-color);
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .gender {
+            span {
+                color: green;
+                font-weight: 600;
+                font-size: 1.6rem;
+            }
+            .male {
+                color: #0a66e0;
+            }
+            .female {
+                color: #df156d;
+            }
+        }
+
+        .age {
+            span {
+                color: red;
+                font-size: 1.6rem;
+            }
+        }
+    }
+}

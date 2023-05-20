@@ -1,0 +1,117 @@
+.wrapper {
+    height: 100%;
+    padding-bottom: 64px;
+
+    .content {
+        .contract-info {
+            .info-column {
+                display: flex;
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 16px;
+                margin-top: 16px;
+
+                .info-container {
+                    flex: 0 0 50%;
+
+                    &:first-child {
+                        border-right: 1px solid #ccc;
+                    }
+                }
+            }
+
+            .info-container {
+                padding: 8px;
+                &.created-date {
+                    border-bottom: 1px solid #ccc;
+                }
+
+                .info-group {
+                    display: flex;
+
+                    &:not(.description) {
+                        align-items: center;
+                    }
+
+                    label {
+                        font-size: 1.6rem;
+                        font-weight: 600;
+                        margin-bottom: 0;
+                        min-width: 120px;
+                    }
+                }
+
+                .info-frame {
+                    padding: 0 32px;
+
+                    .row-info {
+                        display: flex;
+                        flex-direction: column;
+                        margin: 8px 0;
+
+                        .info-group {
+                            margin-left: 32px;
+                            display: flex;
+
+                            &:not(.description) {
+                                align-items: center;
+                            }
+
+                            label {
+                                font-size: 1.6rem;
+                                font-weight: 500;
+                                margin-bottom: 0;
+                                min-width: 120px;
+                            }
+
+                            img {
+                                width: 240px;
+                                margin: 0 4px;
+                                border-radius: var(--default-border-radius);
+                            }
+
+                            video {
+                                width: 240px;
+                                margin: 0 4px;
+                                border-radius: var(--default-border-radius);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .error {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 8px;
+    }
+
+    .completed-btn {
+        display: flex;
+        margin: auto;
+        padding: 8px 16px;
+        width: 160px;
+        border-radius: var(--default-border-radius);
+        background-color: green;
+        text-align: center;
+        cursor: pointer;
+
+        button {
+            margin: auto;
+            background-color: transparent;
+            color: var(--white-color);
+            font-size: 1.6rem;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        &:hover {
+            opacity: 0.6;
+        }
+
+        &.disabled {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+    }
+}

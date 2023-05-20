@@ -1,0 +1,83 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,400&display=swap');
+
+:root {
+    //Colors
+    --primary-color: #1e62af;
+    --primary-active-color: #0e1385;
+    --white-color: #fff;
+    --light-white-color: #fefdff;
+    --text-color: #4e4e4e;
+    --search-filter-background-color: #e7e9ee;
+    --border-color: #333;
+    //Width
+    --default-layout-max-width: 1200px;
+    --default-sidebar-width: 320px;
+
+    //Border-radius
+    --default-border-radius: 4px;
+
+    //Box-shadow
+    --default-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+
+    //Height
+    --default-navbar-height: 80px;
+    --default-content-min-height: calc(100vh - var(--default-navbar-height) - var(--default-footer-height));
+    --default-footer-height: 100px;
+
+    //Fonts
+    --font-family: 'Roboto', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+}
+
+//Overlay scroll bar
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+button,
+input,
+[tabindex] {
+    border: none;
+    outline: none;
+}
+
+button:disabled,
+button[disabled] {
+    pointer-events: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,128 @@
+.wrapper {
+    position: relative;
+    min-height: calc(90vh - var(--default-navbar-height));
+    .content {
+        .title-and-back {
+            margin: 16px 0;
+            .back-link {
+                display: flex;
+                align-items: center;
+                font-size: 2rem;
+                font-weight: 600;
+                color: var(--primary-color);
+                width: fit-content;
+            }
+        }
+
+        .contract {
+            margin: 0 auto;
+            width: 80%;
+            font-size: 1.8rem;
+            textarea {
+                min-height: 80px;
+                resize: none;
+                background-color: var(--white-color);
+                border: none;
+                padding: 12px 16px;
+                outline: none;
+                border: 1px solid var(--primary-color);
+                border-radius: var(--default-border-radius);
+            }
+            label {
+                font-size: 1.6rem;
+                font-weight: 500;
+                color: var(--primary-color);
+            }
+            .client {
+                display: flex;
+                justify-content: space-between;
+            }
+            .cancel {
+                display: flex;
+                flex-direction: column;
+            }
+            hr {
+                margin: 2% 0 1%;
+            }
+            .coach {
+                display: flex;
+                flex-direction: column;
+                .title {
+                    color: var(--primary-color);
+                    text-align: center;
+                }
+
+                .coach-search {
+                    position: relative;
+                    #coach-name {
+                        width: 100%;
+                        background-color: var(--white-color);
+                        padding: 12px 16px;
+                        border: 1px solid var(--primary-color);
+                        border-radius: var(--default-border-radius);
+                        margin-bottom: 8px;
+                    }
+
+                    .icon {
+                        position: absolute;
+                        top: 12px;
+                        right: 16px;
+                    }
+                }
+                select {
+                    margin-bottom: 8px;
+                    padding: 12px 16px;
+                    border: 1px solid var(--primary-color);
+                    border-radius: var(--default-border-radius);
+                    outline: none;
+                }
+                .drop-search {
+                    min-width: 400px;
+                    background-color: var(--white-color);
+                    box-shadow: var(--default-box-shadow);
+                    border-radius: var(--default-border-radius);
+                    position: relative;
+                    .tippy-wrapper {
+                        background-color: white;
+                        max-height: 300px;
+                        padding: 0;
+                        overflow-y: scroll;
+                        .item {
+                            color: black;
+                            margin: 1px 0;
+                            padding: 8px;
+                            &:hover {
+                                cursor: pointer;
+                                background-color: var(--primary-color);
+                                color: var(--white-color);
+                            }
+                            &.active {
+                                border-bottom: 1px solid var(--white-color);
+                            }
+                        }
+                    }
+                }
+            }
+
+            button {
+                cursor: pointer;
+                display: block;
+                justify-self: center;
+                margin: 8% auto 0;
+                padding: 12px 30px;
+                background-color: green;
+                color: white;
+                font-size: 1.6rem;
+                border-radius: var(--default-border-radius);
+
+                &:hover {
+                    opacity: 0.8;
+                }
+                .icon {
+                    margin-right: 5px;
+                    vertical-align: bottom;
+                }
+            }
+        }
+    }
+}

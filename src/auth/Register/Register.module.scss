@@ -1,0 +1,125 @@
+.align-center {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    display: inline-block;
+    .content {
+        display: flex;
+    }
+    button {
+        cursor: pointer;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.img-wrapper {
+    width: 40%;
+    background-image: linear-gradient(var(--primary-color), rgb(33 90 139 / 75%));
+    display: inline-block;
+    border-top-left-radius: var(--default-border-radius);
+    border-bottom-left-radius: var(--default-border-radius);
+    position: relative;
+    min-height: 80vh;
+    h1,
+    img {
+        color: rgba(#fff, 0.3);
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+    h1 {
+        margin-top: 10%;
+    }
+    img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+    }
+}
+#register-form {
+    width: 50%;
+    display: inline-block;
+    margin: auto 2% auto auto;
+    h1 {
+        display: flex;
+        justify-content: center;
+        margin: 16px auto;
+    }
+    label {
+        margin: 4px 0 0;
+        font-size: 1.8rem;
+        display: block;
+    }
+    input,
+    select,
+    option {
+        width: 100%;
+        padding: 12px 16px;
+        margin: 4px 0;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border-radius: var(--default-border-radius);
+        font-size: 1.6rem;
+        background-color: rgba(173, 173, 173, 0.1);
+    }
+    .col2 {
+        display: inline-block;
+        width: 48%;
+    }
+    .checkbox {
+        width: 16px;
+        height: 16px;
+        margin: 4px 4px 2px 0;
+    }
+    .col-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+#submit-btn {
+    cursor: pointer;
+    color: white;
+    font-size: 1.8rem;
+    width: 35%;
+    background-color: var(--primary-color);
+    margin: 10px auto 2px;
+    border-radius: var(--default-border-radius);
+    &:hover {
+        opacity: 0.8;
+    }
+}
+#switch-btn {
+    margin-left: 8px;
+    background: none;
+    padding: 0;
+    width: fit-content;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.policy-link {
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
+@media (max-width: 1000px) {
+    .img-wrapper {
+        display: none;
+    }
+    #register-form {
+        width: 80%;
+        float: left;
+        margin-left: 15%;
+    }
+}

@@ -1,0 +1,190 @@
+.wrapper {
+    min-height: 63vh;
+    .search {
+        max-width: var(--default-layout-max-width);
+        margin: auto;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 16px;
+
+        .search-box {
+            display: flex;
+            height: 36px;
+            border-radius: var(--default-border-radius);
+            background: var(--search-filter-background-color);
+            padding: 8px 12px;
+            color: #8f9bba;
+            font-size: 1.4rem;
+            input {
+                background: transparent;
+            }
+            .search-icon {
+                margin-right: 12px;
+                color: #2b3674;
+                font-size: 1.8rem;
+            }
+        }
+    }
+    .request-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-bottom: 80px;
+
+        .request-item {
+            position: relative;
+            width: 388px;
+            box-shadow: var(--default-box-shadow);
+            padding: 16px;
+            border-radius: var(--default-border-radius);
+
+            .card {
+                .card-content {
+                    display: flex;
+                    align-items: center;
+                    margin: 4px 0;
+
+                    .card-title {
+                        min-width: 160px;
+                        color: var(--primary-color);
+                    }
+
+                    .card-info {
+                        width: 196px;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                }
+            }
+
+            .action {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 16px;
+
+                #payment-btn,
+                #canceled-btn {
+                    flex: 0 0 50%;
+                    padding: 8px;
+                    margin: 0 4px;
+                    border-radius: var(--default-border-radius);
+                    color: var(--white-color);
+                    font-size: 1.6;
+                    font-weight: 500;
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 0.6;
+                    }
+                }
+
+                #payment-btn {
+                    background-color: green;
+                }
+
+                #canceled-btn {
+                    background-color: red;
+                }
+            }
+        }
+    }
+
+    .request-empty {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+            text-align: center;
+            color: red;
+            font-size: 2rem;
+        }
+        .find-link {
+            text-decoration: underline;
+            color: var(--primary-color);
+        }
+    }
+
+    //Modal
+    .header {
+        padding: 16px;
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        text-align: center;
+    }
+    .body {
+        padding: 32px 64px;
+
+        .title {
+            font-size: 3rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .reason {
+            width: 100%;
+            resize: none;
+            padding: 8px 16px;
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+
+        .modal-action {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            #agree-btn,
+            #cancel-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 180px;
+                padding: 16px 32px;
+                margin: 0 8px;
+                color: var(--white-color);
+                font-size: 1.6rem;
+                font-weight: 500;
+                border-radius: var(--default-border-radius);
+                cursor: pointer;
+
+                span {
+                    margin-left: 8px;
+                }
+
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
+
+            #agree-btn {
+                background-color: green;
+            }
+
+            #cancel-btn {
+                background-color: red;
+            }
+        }
+    }
+    .message-frame {
+        padding: 0 120px;
+        height: 200px;
+        margin-bottom: 16px;
+
+        textarea {
+            resize: none;
+            outline: none;
+            width: 100%;
+            height: 100%;
+            font-size: 16px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    }
+
+    .error {
+        margin-bottom: 16px;
+        margin-left: 120px;
+    }
+}
